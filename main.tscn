@@ -1,0 +1,99 @@
+[gd_scene load_steps=8 format=3 uid="uid://bc10a0ykmwewi"]
+
+[ext_resource type="PackedScene" uid="uid://biurbc6kwms2k" path="res://player/player.tscn" id="1_3ut45"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_4iclq"]
+size = Vector2(15, 15)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r163r"]
+albedo_color = Color(0.122252, 0.122252, 0.122252, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_agmm0"]
+size = Vector3(0.195, 3.28, 2.15)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4guqy"]
+albedo_color = Color(0.148193, 0.709326, 0.831855, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_neabo"]
+size = Vector3(1, 0.465, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w8447"]
+albedo_color = Color(0.520968, 0.421596, 0.182825, 1)
+
+[node name="Main" type="Node3D"]
+metadata/_edit_lock_ = true
+
+[node name="World" type="Node3D" parent="."]
+metadata/_edit_lock_ = true
+
+[node name="ground" type="CSGMesh3D" parent="World"]
+use_collision = true
+mesh = SubResource("PlaneMesh_4iclq")
+material = SubResource("StandardMaterial3D_r163r")
+metadata/_edit_lock_ = true
+
+[node name="ramp" type="CSGMesh3D" parent="World"]
+transform = Transform3D(0.431787, 0.901976, 0, -0.901976, 0.431787, 0, 0, 0, 1, 2.21902, 0.543758, -3.78077)
+use_collision = true
+mesh = SubResource("BoxMesh_agmm0")
+material = SubResource("StandardMaterial3D_4guqy")
+
+[node name="ramp2" type="CSGMesh3D" parent="World"]
+transform = Transform3D(2.91234e-08, 6.32491e-09, -1, -0.880345, 0.474334, -2.26385e-08, 0.474334, 0.880345, 1.93823e-08, 4.75084, 1.95934, -1.34538)
+use_collision = true
+mesh = SubResource("BoxMesh_agmm0")
+material = SubResource("StandardMaterial3D_4guqy")
+
+[node name="ramp3" type="CSGMesh3D" parent="World"]
+transform = Transform3D(11.6472, 0, 0, 0, 0.0577184, 0, 0, 0, 1.00981, 4.78151, 1.24329, -3.78675)
+use_collision = true
+mesh = SubResource("BoxMesh_agmm0")
+material = SubResource("StandardMaterial3D_4guqy")
+
+[node name="box" type="CSGMesh3D" parent="World"]
+transform = Transform3D(2.65431, 0, 0, 0, 1, 0, 0, 0, 2.1303, -2.46546, 0.994752, -3.88556)
+use_collision = true
+mesh = SubResource("BoxMesh_neabo")
+material = SubResource("StandardMaterial3D_w8447")
+
+[node name="box2" type="CSGMesh3D" parent="World"]
+transform = Transform3D(2.65431, 0, 0, 0, 1, 0, 0, 0, 2.1303, -5.63668, 1.87789, -3.88556)
+use_collision = true
+mesh = SubResource("BoxMesh_neabo")
+material = SubResource("StandardMaterial3D_w8447")
+
+[node name="box3" type="CSGMesh3D" parent="World"]
+transform = Transform3D(2.65431, 0, 0, 0, 1, 0, 0, 0, 2.1303, -5.63668, 2.81002, -0.920952)
+use_collision = true
+mesh = SubResource("BoxMesh_neabo")
+material = SubResource("StandardMaterial3D_w8447")
+
+[node name="box4" type="CSGMesh3D" parent="World"]
+transform = Transform3D(2.65431, 0, 0, 0, 1, 0, 0, 0, 2.1303, -5.63668, 2.55963, 4.5105)
+use_collision = true
+mesh = SubResource("BoxMesh_neabo")
+material = SubResource("StandardMaterial3D_w8447")
+
+[node name="box5" type="CSGMesh3D" parent="World"]
+transform = Transform3D(2.65431, 0, 0, 0, 1, 0, 0, 0, 2.1303, -2.00084, 3.29754, 4.5105)
+use_collision = true
+mesh = SubResource("BoxMesh_neabo")
+material = SubResource("StandardMaterial3D_w8447")
+
+[node name="box6" type="CSGMesh3D" parent="World"]
+transform = Transform3D(2.65431, 0, 0, 0, 1, 0, 0, 0, 2.1303, 1.58658, 2.10353, 4.5105)
+use_collision = true
+mesh = SubResource("BoxMesh_neabo")
+material = SubResource("StandardMaterial3D_w8447")
+
+[node name="box7" type="CSGMesh3D" parent="World"]
+transform = Transform3D(2.65431, 0, 0, 0, 1, 0, 0, 0, 2.1303, 4.90962, 1.10381, 4.5105)
+use_collision = true
+mesh = SubResource("BoxMesh_neabo")
+material = SubResource("StandardMaterial3D_w8447")
+
+[node name="Player" parent="." instance=ExtResource("1_3ut45")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, -3, 0)
