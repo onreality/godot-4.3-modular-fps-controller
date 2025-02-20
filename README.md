@@ -14,6 +14,7 @@ Movement script is for Godot 4's `CharacterBody3D` node, fully customizable. Use
   - **Ground Movement:** Customizable walking and sprinting speeds.
   - **Air Control:** Fine-tune maximum air speed, acceleration, and an air strafe multiplier for precise aerial maneuverability.
   - **Crouch Functionality:** Smooth transition between standing and crouching with configurable heights and speeds.
+  - **Uses raycast to check for collisions above the player to automatically stay crouched**
   
 - **Camera Effects**  
   - **Head Bobbing:** Realistic camera bobbing when moving.
