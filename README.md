@@ -1,6 +1,7 @@
 # Advanced Movement Script for Godot 4
 
 Movement script is for Godot 4's `CharacterBody3D` node, fully customizable. Uses static typing for improved performance and maintainability.
+All the features can be toggled on/off in editor
 
 ## Features
 
@@ -11,15 +12,16 @@ Movement script is for Godot 4's `CharacterBody3D` node, fully customizable. Use
   This makes it easier if you want to add more states for your needs
 
 - **Full Control of Movement Dynamics**  
-  - **Ground Movement:** Customizable walking and sprinting speeds.
-  - **Air Control:** Fine-tune maximum air speed, acceleration, and an air strafe multiplier for precise aerial maneuverability.
-  - **Crouch Functionality:** Smooth transition between standing and crouching with configurable heights and speeds.
-  - **Uses raycast to check for collisions above the player to automatically stay crouched**
+  - **Ground Movement:** Customizable walking, sprinting, acceleration speeds and ground friction.
+  - **Air Control:** Tune maximum air speed, acceleration, and an air strafe multiplier for better aerial maneuverability.
+  - **Crouch Functionality:** Configurable height, transition speed and crouch movement speed.
+  - **Uses raycast to check for collisions above the player to automatically stay crouched in tight spaces**
+  - **No jittering on object edges when using high refresh monitors (tested on 280hz monitor).**
   
 - **Camera Effects**  
-  - **Head Bobbing:** Realistic camera bobbing when moving.
-  - **Field-of-View (FOV) Changes:** Dynamic FOV adjustments while sprinting.
-  - **Camera Tilt:** adjustable tilt effect when strafing.
+  - **Head Bobbing:** Adjustable camera bobbing strenght and frequency when moving.
+  - **Field-of-View (FOV) Changes:** Adjustable dynamic FOV adjustments while sprinting.
+  - **Camera Tilt:** Adjustable tilt effect when strafing.
 
 - **Customizable Mouse Sensitivity**  
   Slider for mouse sensitivity
